@@ -16,7 +16,7 @@ export const primitives = {
     secondary: {
       main: "#fffaee", // krem
       light: "#fffef9", // daha açık krem
-      dark: "#e6dfc7", // koyu krem/bej
+      dark: "#4e8d5d", // koyu krem/bej
     },
 
     neutral: {

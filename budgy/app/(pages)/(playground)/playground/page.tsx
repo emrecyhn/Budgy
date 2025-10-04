@@ -1,30 +1,19 @@
 "use client";
 
-import CustomButton from "@/app/components/button";
+import Header from "@/app/components/header";
 import { Box } from "@mui/material";
 
 const page = () => {
   return (
     <Box
-      color="primary.main"
-      width={1000}
-      height={1000}
-      bgcolor="secondary.main"
+      color="white"
+      width={"100%"}
+      height={"100vh"}
+      bgcolor="white"
       display="flex"
       justifyContent="center"
       alignItems="center"
-    >
-      <CustomButton
-        onClick={() => alert("Button clicked!")}
-        label="LOGIN"
-        sx={{
-          padding: "2px 30px",
-        }}
-        labelSx={{
-          letterSpacing: "3px",
-        }}
-      />
-    </Box>
+    ></Box>
   );
 };
 

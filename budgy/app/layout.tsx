@@ -1,11 +1,11 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { ThemeProvider, CssBaseline, IconButton } from "@mui/material";
+import { ThemeProvider, CssBaseline } from "@mui/material";
 import { getTheme } from "@/app/lib/theme";
-import LightModeIcon from "@mui/icons-material/LightMode";
-import DarkModeIcon from "@mui/icons-material/DarkMode";
+
 import { Montserrat } from "next/font/google";
+import Header from "./components/header";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -37,11 +37,7 @@ export default function RootLayout({
         <ThemeProvider theme={getTheme(mode)}>
           <CssBaseline />
           {/* Tema toggle butonu */}
-          <div style={{ position: "fixed", top: 16, right: 16, zIndex: 9999 }}>
-            <IconButton onClick={toggleTheme} color="inherit">
-              {mode === "light" ? <DarkModeIcon /> : <LightModeIcon />}
-            </IconButton>
-          </div>
+          <Header onClick={toggleTheme} mode={mode} />
 
           {children}
         </ThemeProvider>

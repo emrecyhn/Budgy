@@ -2,6 +2,7 @@
 
 import { createTheme } from "@mui/material/styles";
 import { primitives } from "./constants";
+import { color } from "chart.js/helpers";
 
 const { colors } = primitives;
 
@@ -26,7 +27,7 @@ const lightTheme = createTheme({
     },
     text: {
       primary: colors.text.light, // koyu gri yazı
-      secondary: "#666666",
+      secondary: colors.text.dark, // açık tema için koyu yazı",
       disabled: "#999999",
     },
     error: {
